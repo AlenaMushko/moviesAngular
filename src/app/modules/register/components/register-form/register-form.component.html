@@ -1,0 +1,29 @@
+<form>
+    <mat-card class="form-card" style="background-color: var(--background-secondary-color)">
+        <mat-card-header class="form-title">
+            <mat-card-title>REGISTER</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+
+            <mat-form-field class="form-label "  appearance="outline">
+                <mat-label >Email</mat-label>
+                <input matInput required class=" bigger-label">
+                <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+            </mat-form-field>
+
+            <mat-form-field class="form-label" appearance="outline">
+                <mat-label >Password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+
+            <mat-card-actions>
+                <button mat-raised-button class="btn form-btn" style="background: var(--login-btn)">Register</button>
+            </mat-card-actions>
+        </mat-card-content>
+    </mat-card>
+</form>
+

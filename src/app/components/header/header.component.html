@@ -1,13 +1,20 @@
 <div class="header">
-
-    <a routerLink="movie" routerLinkActive="active">Movies</a>
-    <a routerLink="genre" routerLinkActive="active">Genres</a>
-    <a routerLink="soon" routerLinkActive="active">Soon</a>
-    <a routerLink="login" routerLinkActive="active">Login</a>
-    <a routerLink="register" routerLinkActive="active">Register</a>
-
-    <div role="button" tabindex="0" (click)="toggleTheme()" (keydown.enter)="toggleTheme()">
-        <i *ngIf="isDarkTheme" class="bi bi-moon-stars-fill"></i>
-        <i *ngIf="!isDarkTheme" class="bi bi-emoji-sunglasses-fill"></i>
+    <div class="header-wrapper">
+        <a routerLink="movie" routerLinkActive="active">Movies</a>
+        <a routerLink="genre" routerLinkActive="active">Genres</a>
+        <a routerLink="soon" routerLinkActive="active">Soon</a>
     </div>
+
+    <div class="header-wrapper">
+        <a routerLink="login" routerLinkActive="active">Login</a>
+        <a routerLink="register" routerLinkActive="active">Register</a>
+
+        <button mat-raised-button class="btn" (click)="logOut()">Log Out</button>
+
+        <div role="button" tabindex="0" (click)="toggleTheme()" (keydown.enter)="toggleTheme()">
+            <i *ngIf="isDarkTheme" class="bi bi-moon-stars-fill"></i>
+            <i *ngIf="!isDarkTheme" class="bi bi-emoji-sunglasses-fill"></i>
+        </div>
+    </div>
+
 </div>
