@@ -1,0 +1,18 @@
+body.dark-theme { /* Colors */
+    --primary-color: #f5f5f5;
+    --background-color: #151223;
+    --background-secondary-color: #261d4a;
+    --border-color:rgb(197, 191, 222);
+    --text-primary-color: #f5f5f5;
+    --text-secondary-color: rgb(197, 191, 222);
+    --info-color: #3b9fed;
+
+    --box-shadow:
+            rgba(255, 255, 255, 0.15) 0px 2px 1px -1px,
+            rgba(255, 255, 255, 0.1) 0px 1px 1px 0px,
+            rgba(255, 255, 255, 0.08) 0px 1px 3px 0px;
+
+/* Components: Button */
+    --button-transition: color 0.5s ease;
+    --button-hover-color: #9c8bdf;
+}

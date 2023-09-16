@@ -1,9 +1,9 @@
-export interface IGenresObj {
+export interface IGenreItem {
     id: number,
     name: string
 }
 
 export interface IGenre {
-    genres: IGenresObj[]
+    genres: IGenreItem[]
 }
 

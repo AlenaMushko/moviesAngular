@@ -1,0 +1,14 @@
+<mat-card class="card" (click)="toIdPage()">
+    <app-poster-preview [movie]="movie"></app-poster-preview>
+    <mat-card-content>
+        <p>{{movie.title || movie.original_title || ''}}</p>
+        <mat-divider></mat-divider>
+
+    </mat-card-content>
+    <mat-card-footer>
+        <div class="card-footer">
+            <app-genre-badge [movie]="movie"></app-genre-badge>
+            <p>{{releaseDate || ''}}</p>
+        </div>
+    </mat-card-footer>
+</mat-card>

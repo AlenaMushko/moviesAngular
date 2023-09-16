@@ -1,0 +1,12 @@
+<div>
+    <div class="movieInfo-wrap">
+        <app-poster-preview [movie]="movie"></app-poster-preview>
+        <app-movie-description [movie]="movie"></app-movie-description>
+    </div>
+    <div class="video">
+        <app-video-for-movie [id]="idMovie"></app-video-for-movie>
+    </div>
+    <app-cast-movie-list [id]="idMovie"></app-cast-movie-list>
+</div>
+
+

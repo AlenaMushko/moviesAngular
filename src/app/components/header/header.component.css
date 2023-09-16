@@ -11,9 +11,14 @@
     text-decoration: none;
     color: #03071f;
     font-size: 24px;
+    border-radius: 8px;
+    transition: boxShadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header a[class=active]{
-    border-radius: 12px;
-    border: 1px solid #03071f;
+background: linear-gradient(90deg, rgba(135,206,250,1) 10%, rgba(119,95,216,0.759563200280112) 100%);
+}
+
+.header a:hover{
+    box-shadow: 0 8px 43px #775fd8;
 }

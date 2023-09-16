@@ -1,0 +1,10 @@
+<button mat-raised-button class="btn youtube" *ngIf="video" (click)="openVideo()">
+    <i class="bi bi-youtube"></i> Watch the trailer
+</button>
+
+<app-video-modal *ngIf="video"
+        [url]="'https://www.youtube.com/embed/' + video.key"
+        [isOpenVideo]="isOpenVideo"
+        (setOpenVideo)="isOpenVideo = $event">
+</app-video-modal>
+

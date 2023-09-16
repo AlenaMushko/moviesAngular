@@ -1,0 +1,18 @@
+<div *ngIf="movie" class="box">
+    <h2>{{movie.title || movie.original_title || ''}}</h2>
+    <h6>{{releaseDate}}</h6>
+
+    <p><span>Vote:</span> {{movie.vote_average}}</p>
+    <p><span>Genres:</span> {{movieGenres}}</p>
+    <p><span>Budget:</span> {{movie.budget}}$</p>
+    <p><span>Tagline:</span> {{movie.tagline}}</p>
+
+    <p>{{movie.overview}}</p>
+
+    <div class="production-companies">
+        <app-production-img [productionArr]="productionArr"></app-production-img>
+    </div>
+</div>
+
+
+

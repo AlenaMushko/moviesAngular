@@ -1,0 +1,22 @@
+<mat-card *ngIf="movie" class="custom-box" style="position: relative;">
+<img mat-card-image *ngIf="movie.poster_path; else noPoster"
+         src={{cardSRC}}
+         [alt]="movie.title || movie.original_title || ''"
+         style="width: 100%; border-radius: 8px 8px 0 0;">
+    <ng-template #noPoster>
+        <img mat-card-image
+                src={{notPoster}}
+             [alt]="movie.title || movie.original_title || ''"
+             style="width: 100%; border-radius: 8px 8px 0 0;">
+    </ng-template>
+
+    <div *ngIf="movie.adult" class="adult">
+        18+
+    </div>
+
+    <div *ngIf="movie.vote_average" class="rating">
+        <i *ngFor="let star of [].constructor(filledStars)" class="bi bi-star-fill"></i>
+        <i *ngFor="let star of [].constructor(emptyStars)" class="bi bi-star"></i>
+    </div>
+
+</mat-card>

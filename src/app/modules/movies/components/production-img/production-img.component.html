@@ -1,0 +1,11 @@
+<div *ngIf="productionArr" >
+    <ng-container *ngFor="let company of productionArr">
+        <img *ngIf="company.logo_path"
+             [src]="'https://image.tmdb.org/t/p/w500' + company.logo_path"
+             [alt]="company.name || ''"
+             width="100px"
+             style="margin-left: 3vw;">
+    </ng-container>
+</div>
+
+
