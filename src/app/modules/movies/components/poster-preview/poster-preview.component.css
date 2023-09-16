@@ -1,0 +1,18 @@
+.adult{
+    background-color: rgb(240, 212, 58);
+    border-radius: 50%;
+    padding: 4px;
+    position: absolute;
+    top: 2%;
+    right: 5%;
+}
+
+.rating {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+}
+
+.rating .bi-star-fill{
+   color: rgb(240, 212, 58);
+}

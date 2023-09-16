@@ -1,9 +1,9 @@
-import {IGenresObj} from "./genre.interface";
+import {IGenreItem} from "./genre.interface";
 
 export interface IFilm {
     adult: boolean;
     backdrop_path: string;
-    genre_ids?: number[];
+    genre_ids: number[];
     id: number;
     original_language: string;
     original_title: string;
@@ -23,7 +23,7 @@ export interface IMovieObj {
     total_pages: number
 }
 
-interface IProductionCompanies {
+export interface IProductionCompanies {
     id: number,
     name: string,
     logo_path: string
@@ -31,7 +31,7 @@ interface IProductionCompanies {
 
 export interface IMovieById extends IFilm {
     budget: number,
-    genres: IGenresObj[],
+    genres: IGenreItem[],
     homepage: string,
     production_companies: IProductionCompanies[],
     tagline: string,

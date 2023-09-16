@@ -1,8 +1,12 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import {HttpClientModule} from "@angular/common/http";
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {AppComponent} from './components/app.component';
-import {HttpClientModule} from "@angular/common/http";
 import {MainLayoutComponent} from './layouts/main-layout/main-layout.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {HeaderComponent} from './components/header/header.component';
@@ -16,7 +20,11 @@ import {HeaderComponent} from './components/header/header.component';
     imports: [
         BrowserModule,
         HttpClientModule,
-        AppRoutingModule
+        AppRoutingModule,
+
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatIconModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

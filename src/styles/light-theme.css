@@ -1,0 +1,18 @@
+
+body { /* Colors */
+    --primary-color: #03071f;
+    --background-color: #fff;
+    --background-secondary-color: rgb(197, 191, 222);
+    --border-color: #847aae;
+    --text-primary-color: #03071f;
+    --text-secondary-color: rgb(43, 19, 131);
+    --info-color: rgba(210, 222, 245, 0.67);
+
+    --box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px,
+    rgba(0, 0, 0, 0.14) 0px 1px 1px 0px,
+    rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+
+    /* Components: Button */
+    --button-transition: color 0.5s ease;
+    --button-hover-background: #a399ca;
+}

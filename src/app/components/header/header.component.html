@@ -6,4 +6,8 @@
     <a routerLink="login" routerLinkActive="active">Login</a>
     <a routerLink="register" routerLinkActive="active">Register</a>
 
+    <div role="button" tabindex="0" (click)="toggleTheme()" (keydown.enter)="toggleTheme()">
+        <i *ngIf="isDarkTheme" class="bi bi-moon-stars-fill"></i>
+        <i *ngIf="!isDarkTheme" class="bi bi-emoji-sunglasses-fill"></i>
+    </div>
 </div>

@@ -1,0 +1,92 @@
+@import "./dark-theme.css";
+@import "./light-theme.css";
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-primary-color);
+}
+
+.mat-button {
+    transition: var(--button-transition);
+}
+
+.mat-button:hover {
+    background: var(--button-hover-background);
+    color: var(--button-hover-color);
+}
+
+button .bi {
+    background: transparent;
+    border: none;
+}
+
+.bi {
+    font-size: 24px;
+    background: transparent;
+    transition: color 0.3s ease;
+}
+
+.bi:hover {
+    color: #e5e506;
+}
+
+.container {
+    padding: 60px 20px;
+}
+
+.container-list {
+    width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 959px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media (min-width: 960px) and (max-width: 1279px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1280px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+mat-card.card {
+    width: 100%;
+    color: var(--text-primary-color);
+    box-shadow: var(--box-shadow);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+}
+
+.card:hover {
+    box-shadow: 0 8px 43px #775fd8;
+}
+
+.btn {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    border-radius: 8px;
+    padding: 8px 20px;
+    color: var(--text-primary-color);
+}
+
+.btn:hover{
+    box-shadow: 0 8px 43px #775fd8;
+
+}

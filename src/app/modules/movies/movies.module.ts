@@ -1,19 +1,41 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { MoviesRoutingModule } from './movies-routing.module';
-import { MoviesPageComponent } from './pages/movies-page/movies-page.component';
-import { MovieIdPageComponent } from './pages/movie-id-page/movie-id-page.component';
+import {MatCardModule} from "@angular/material/card";
 
+import {MoviesRoutingModule} from './movies-routing.module';
+import {MoviesPageComponent} from './pages/movies-page/movies-page.component';
+import {MovieIdPageComponent} from './pages/movie-id-page/movie-id-page.component';
+import {
+    MoviesListComponent, MoviesListCardComponent, PosterPreviewComponent,
+    VideoModalComponent, MovieInfoComponent, MovieDescriptionComponent, GenreBadgeComponent,
+    CastMovieListComponent, VideoForMovieComponent, CastMovieItemComponent
+} from './components';
+import {MatListModule} from "@angular/material/list";
+import {ProductionImgComponent} from './components/production-img/production-img.component';
 
 @NgModule({
-  declarations: [
-    MoviesPageComponent,
-    MovieIdPageComponent
-  ],
-  imports: [
-    CommonModule,
-    MoviesRoutingModule
-  ]
+    declarations: [
+        MoviesPageComponent,
+        MovieIdPageComponent,
+        MoviesListComponent,
+        MoviesListCardComponent,
+        PosterPreviewComponent,
+        VideoForMovieComponent,
+        VideoModalComponent,
+        MovieInfoComponent,
+        MovieDescriptionComponent,
+        GenreBadgeComponent,
+        CastMovieListComponent,
+        CastMovieItemComponent,
+        ProductionImgComponent
+    ],
+    imports: [
+        CommonModule,
+        MoviesRoutingModule,
+        MatCardModule,
+        MatListModule
+    ]
 })
-export class MoviesModule { }
+export class MoviesModule {
+}
