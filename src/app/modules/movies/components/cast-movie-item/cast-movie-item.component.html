@@ -1,1 +1,31 @@
-<p>cast-movie-item works!</p>
+<mat-card class="card" >
+    <img mat-card-image *ngIf="cast.profile_path; else noPoster"
+         src={{cardSRC}}
+         [alt]="cast.original_name  || ''"
+        >
+    <ng-template #noPoster>
+        <img mat-card-image
+             src={{notPoster}}
+             [alt]="cast.original_name  || ''"
+        >
+    </ng-template>
+    <mat-card-content>
+        <h3><span>Character:</span>{{cast.character}}</h3>
+        <p><span>Stage name:</span>{{cast.name}}</p>
+        <p><span>Name:</span>{{cast.original_name}}</p>
+        <mat-divider></mat-divider>
+    </mat-card-content>
+    <mat-card-footer>
+        <div class="card-footer">
+            <i class="bi bi-hearts"></i>
+            <p>{{cast.popularity}}</p>
+        </div>
+    </mat-card-footer>
+</mat-card>
+
+
+
+
+
+
+

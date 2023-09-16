@@ -1,1 +1,16 @@
 
+<div (click)="closeModal()" class="modal-backdrop">
+
+    <div (click)="$event.stopPropagation()" class="modal-content">
+        <i class="bi bi-x-circle" (click)="closeModal()"></i>
+        <youtube-player
+                videoId={{videoId}}
+                suggestedQuality="highres"
+                [height]="250"
+                [width]="500"
+                [startSeconds]="4"
+                [endSeconds]="8">
+        </youtube-player>
+    </div>
+
+</div>
