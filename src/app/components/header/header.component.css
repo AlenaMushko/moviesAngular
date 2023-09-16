@@ -1,0 +1,19 @@
+.header{
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(38,29,74,0.7203475140056023) 100%);
+    padding: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header a{
+    padding: 8px;
+    text-decoration: none;
+    color: #03071f;
+    font-size: 24px;
+}
+
+.header a[class=active]{
+    border-radius: 12px;
+    border: 1px solid #03071f;
+}
