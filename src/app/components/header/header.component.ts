@@ -8,8 +8,24 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   isDarkTheme = true;
 
+  constructor() {
+    const savedTheme = localStorage.getItem('isDarkTheme');
+    if (savedTheme !== null) {
+      this.isDarkTheme = savedTheme === 'true';
+    } else {
+      this.isDarkTheme = true;
+    }
+    document.body.classList.toggle('dark-theme', this.isDarkTheme);
+  }
+
+
   toggleTheme() {
     this.isDarkTheme = !this.isDarkTheme;
     document.body.classList.toggle('dark-theme', this.isDarkTheme);
+    localStorage.setItem('isDarkTheme', this.isDarkTheme.toString());
+  }
+
+  logOut(){
+
   }
 }

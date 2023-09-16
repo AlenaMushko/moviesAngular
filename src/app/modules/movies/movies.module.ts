@@ -36,7 +36,7 @@ import {YouTubePlayerModule} from "@angular/youtube-player";
         MoviesRoutingModule,
         MatCardModule,
         MatListModule,
-        YouTubePlayerModule
+        YouTubePlayerModule,
     ]
 })
 export class MoviesModule {

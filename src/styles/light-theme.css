@@ -2,11 +2,13 @@
 body { /* Colors */
     --primary-color: #03071f;
     --background-color: #fff;
-    --background-secondary-color: rgb(197, 191, 222);
+    --background-secondary-color: #fff;
     --border-color: #847aae;
     --text-primary-color: #03071f;
     --text-secondary-color: rgb(43, 19, 131);
     --info-color: rgba(210, 222, 245, 0.67);
+    --forn-border: rgb(102, 101, 101);
+
 
     --box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px,
     rgba(0, 0, 0, 0.14) 0px 1px 1px 0px,
@@ -15,4 +17,7 @@ body { /* Colors */
     /* Components: Button */
     --button-transition: color 0.5s ease;
     --button-hover-background: #a399ca;
+
+    --login-btn: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(38,29,74,0.7203475140056023) 100%);
+
 }
