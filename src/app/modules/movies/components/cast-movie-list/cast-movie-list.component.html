@@ -1,1 +1,12 @@
-<p>cast-movie-list works!</p>
+<div class="container-casts">
+    <h2>Main actors</h2>
+    <div class="container-list">
+        <div *ngFor="let cast of casts">
+            <app-cast-movie-item [cast]="cast"></app-cast-movie-item>
+        </div>
+    </div>
+
+</div>
+
+
+

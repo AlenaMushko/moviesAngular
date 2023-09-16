@@ -8,7 +8,7 @@ const movieById = `${API}/movie`;
 const genre = `${API}/genre/movie/list`;
 const soon = `${API}/movie/upcoming`;
 const search = `${API}search/movie`;
-const cast = `${API}/credits`;
+const cast = "/credits";
 const videos = "/videos";
 
 const urls = {

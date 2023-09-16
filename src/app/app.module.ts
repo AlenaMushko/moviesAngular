@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {HttpClientModule} from "@angular/common/http";
+import { YouTubePlayerModule } from "@angular/youtube-player";
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -21,6 +22,7 @@ import {HeaderComponent} from './components/header/header.component';
         BrowserModule,
         HttpClientModule,
         AppRoutingModule,
+        YouTubePlayerModule,
 
         BrowserAnimationsModule,
         MatButtonModule,

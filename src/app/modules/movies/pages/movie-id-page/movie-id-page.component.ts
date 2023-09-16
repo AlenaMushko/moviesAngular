@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-movie-id-page',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./movie-id-page.component.css']
 })
 export class MovieIdPageComponent {
+  constructor(private location: Location) {}
 
+  goBack() {
+    this.location.back();
+  }
 
 }

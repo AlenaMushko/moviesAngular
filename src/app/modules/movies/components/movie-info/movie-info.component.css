@@ -1,14 +1,32 @@
+
 .movieInfo-wrap {
     display: flex;
     gap: 3vw;
+}
 
-    @media (max-width: 900px) {
-        flex-direction: column
-    }
+.movieInfo-img {
+    flex-basis: 40%;
+    max-width: 40%;
+}
+
+app-movie-description {
+    flex: 1;
 }
 
 .video {
     display: flex;
     justify-content: center;
     margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+    .movieInfo-wrap {
+        flex-direction: column;
+    }
+
+    .movieInfo-img, app-movie-description {
+        flex-basis: auto;
+        max-width: 100%;
+        width: 100%;
+    }
 }

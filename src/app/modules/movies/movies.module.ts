@@ -13,6 +13,7 @@ import {
 } from './components';
 import {MatListModule} from "@angular/material/list";
 import {ProductionImgComponent} from './components/production-img/production-img.component';
+import {YouTubePlayerModule} from "@angular/youtube-player";
 
 @NgModule({
     declarations: [
@@ -34,7 +35,8 @@ import {ProductionImgComponent} from './components/production-img/production-img
         CommonModule,
         MoviesRoutingModule,
         MatCardModule,
-        MatListModule
+        MatListModule,
+        YouTubePlayerModule
     ]
 })
 export class MoviesModule {
