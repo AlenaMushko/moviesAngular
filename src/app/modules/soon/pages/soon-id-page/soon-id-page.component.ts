@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Location} from "@angular/common";
 
 @Component({
   selector: 'app-soon-id-page',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./soon-id-page.component.css']
 })
 export class SoonIdPageComponent {
+  constructor(private location: Location) {}
+
+  goBack() {
+    this.location.back();
+  }
 
 }

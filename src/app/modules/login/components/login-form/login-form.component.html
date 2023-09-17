@@ -10,7 +10,6 @@
             <mat-form-field class="form-label" appearance="outline">
                 <mat-label >Email</mat-label>
                 <input matInput required class=" bigger-label" formControlName="email">
-                <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
             </mat-form-field>
 
             <i style="color: tomato" *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty
@@ -25,7 +24,7 @@
             </mat-form-field>
 
             <mat-card-actions>
-                <button mat-raised-button class="btn form-btn" style="background: var(--login-btn)" [disabled]="loginForm.invalid">Login</button>
+                <button mat-raised-button class="btn form-btn" style="background: var(--login-btn)" [disabled]="loginForm.invalid">Login <i class="bi bi-send-arrow-up"></i></button>
             </mat-card-actions>
         </mat-card-content>
     </mat-card>

@@ -2,7 +2,7 @@
 body { /* Colors */
     --primary-color: #03071f;
     --background-color: #fff;
-    --background-secondary-color: #fff;
+    --background-secondary-color: rgba(210, 222, 245, 0.67);
     --border-color: #847aae;
     --text-primary-color: #03071f;
     --text-secondary-color: rgb(43, 19, 131);

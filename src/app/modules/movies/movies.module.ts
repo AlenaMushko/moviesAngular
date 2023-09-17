@@ -15,6 +15,11 @@ import {MatListModule} from "@angular/material/list";
 import {ProductionImgComponent} from './components/production-img/production-img.component';
 import {YouTubePlayerModule} from "@angular/youtube-player";
 import {MatPaginatorModule} from "@angular/material/paginator";
+import { SearchMovieComponent } from './components/search-movie/search-movie.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 
 @NgModule({
     declarations: [
@@ -30,7 +35,12 @@ import {MatPaginatorModule} from "@angular/material/paginator";
         GenreBadgeComponent,
         CastMovieListComponent,
         CastMovieItemComponent,
-        ProductionImgComponent
+        ProductionImgComponent,
+        SearchMovieComponent
+    ],
+    exports: [
+        MoviesListComponent,
+        MovieInfoComponent
     ],
     imports: [
         CommonModule,
@@ -39,6 +49,10 @@ import {MatPaginatorModule} from "@angular/material/paginator";
         MatListModule,
         YouTubePlayerModule,
         MatPaginatorModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatProgressBarModule,
     ]
 })
 export class MoviesModule {

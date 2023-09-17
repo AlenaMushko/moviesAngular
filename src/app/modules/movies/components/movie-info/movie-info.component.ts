@@ -16,9 +16,17 @@ export class MovieInfoComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.activatedRoute.params.subscribe(({id}) => {
-            this.moviesService.getById(id).subscribe(value => this.movie = value);
-            this.idMovie = id;
+
+        this.activatedRoute.params.subscribe(({movieId, id}) => {
+            if(movieId){
+                this.moviesService.getById(movieId).subscribe(value => this.movie = value);
+                this.idMovie = movieId;
+            } else {
+                this.moviesService.getById(id).subscribe(value => this.movie = value);
+                this.idMovie = id;
+            }
+
         })
+
     }
 }

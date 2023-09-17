@@ -1,0 +1,8 @@
+.genre-card {
+    padding: 8px 0;
+    font-size: 20px;
+    text-align: center;
+    line-height: 60px;
+    background-color: var(--background-secondary-color);
+}
+

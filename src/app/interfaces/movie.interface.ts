@@ -21,7 +21,6 @@ export interface IMovieObj {
     results: IFilm[];
     page: number;
     total_results:number;
-    // total_pages: number
 }
 
 export interface IProductionCompanies {
