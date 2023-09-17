@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {IGenre, IMovieObj} from "../interfaces";
+import {IFilm, IGenre,  IPagination} from "../interfaces";
 import {api_key, urls} from "../constants";
 
 @Injectable({
@@ -15,7 +15,8 @@ export class GenresService {
         return this.httpClient.get<IGenre>(urls.genres.base + api_key)
     }
 
-    getById(page: number, id: number): Observable<IMovieObj> {
-        return this.httpClient.get<IMovieObj>(urls.movies.base + api_key + `&with_genres=${id}&page=${page}`)
+    getById(page = 1, id: number): Observable<IPagination<IFilm>> {
+        return this.httpClient.get<IPagination<IFilm>>(urls.movies.base + api_key + `&with_genres=${id}`, {params: {page}})
     }
+
 }

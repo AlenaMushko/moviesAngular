@@ -1,0 +1,6 @@
+<div class="container-list">
+    <div *ngFor="let genre of genres" class="card genre-card" (click)="toIdPage(genre.id)">
+        <p>{{genre.name}}</p>
+    </div>
+</div>
+

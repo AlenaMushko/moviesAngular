@@ -1,1 +1,20 @@
-<p>genre-id-page works!</p>
+<button mat-raised-button class="btn" (click)="goBack()" >
+    <i class="bi bi-box-arrow-left"></i> Go to the previous page
+</button>
+
+<app-movies-list [movies]="movies"></app-movies-list>
+
+<mat-progress-bar *ngIf="!movies" mode="indeterminate"></mat-progress-bar>
+
+<div class="pagination">
+    <mat-paginator #paginator
+                   class="demo-paginator"
+                   (page)="handlePageEvent($event)"
+                   [length]="length"
+                   [pageSize]="pageSize"
+                   [showFirstLastButtons]="true"
+                   [pageIndex]="pageIndex"
+                   aria-label="Select page">
+    </mat-paginator>
+</div>
+

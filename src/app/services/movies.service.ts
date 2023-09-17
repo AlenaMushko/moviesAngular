@@ -13,22 +13,18 @@ export class MoviesService {
     }
 
     getAll(page=1): Observable<IPagination<IFilm>> {
-        return this.httpClient.get<IPagination<IFilm>>(urls.movies.base + api_key + `&page=${page}`, {params:{page}})
+        return this.httpClient.get<IPagination<IFilm>>(urls.movies.base + api_key , {params:{page}})
     }
 
     getById(id: number): Observable<IMovieById> {
         return this.httpClient.get<IMovieById>(urls.movieById.base + `/${id}` + api_key)
     }
 
-    getSoon(page: number): Observable<IPagination<IFilm>> {
-        return this.httpClient.get<IPagination<IFilm>>(urls.soon.base + api_key + `&page=${page}`)
+    getSoon(page=1): Observable<IPagination<IFilm>> {
+        return this.httpClient.get<IPagination<IFilm>>(urls.soon.base + api_key , {params:{page}})
     }
 
-    getAnimation(page: number): Observable<IPagination<IFilm>> {
-        return this.httpClient.get<IPagination<IFilm>>(urls.movies.base + api_key + `&page=${page}` + '&with_genres=16')
-    }
-
-    getSearch(page: number, searchQuery: string): Observable<IMovieObj> {
-        return this.httpClient.get<IMovieObj>(urls.search.base + api_key + `&query=${searchQuery}&page=${page}`)
+    getSearch(page=1, searchQuery: string): Observable<IMovieObj> {
+        return this.httpClient.get<IMovieObj>(urls.search.base + api_key + `&query=${searchQuery}`, {params:{page}})
     }
 }

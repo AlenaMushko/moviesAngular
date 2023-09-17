@@ -1,0 +1,13 @@
+
+.search-input {
+    display: flex;
+    justify-content: space-around;
+    width: 50vw;
+}
+
+.search-btn {
+    border: none;
+    background-color: transparent;
+    color: var(--text-primary-color);
+}
+

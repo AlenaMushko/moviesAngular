@@ -12,6 +12,7 @@ import {MainLayoutComponent} from './layouts/main-layout/main-layout.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {HeaderComponent} from './components/header/header.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 
 @NgModule({
     declarations: [
@@ -29,6 +30,7 @@ import {MatDialogModule} from "@angular/material/dialog";
         BrowserAnimationsModule,
         MatButtonModule,
         MatIconModule,
+        MatProgressBarModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

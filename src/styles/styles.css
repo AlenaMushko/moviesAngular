@@ -61,7 +61,7 @@ button .bi {
     }
 }
 
-mat-card.card {
+mat-card.card , .card{
     width: 100%;
     color: var(--text-primary-color);
     box-shadow: var(--box-shadow);
@@ -87,14 +87,14 @@ mat-form-field.form-label {
     color: var(--forn-border);
 }
 
-input.bigger-label{
+input.bigger-label {
     padding: 12px 0;
 }
 
-.form-btn{
+.form-btn {
     width: 100%;
     margin: auto;
-    padding: 8px ;
+    padding: 8px;
 }
 
 .card:hover {
@@ -113,4 +113,10 @@ input.bigger-label{
 .btn:hover {
     box-shadow: 0 8px 43px #775fd8;
 
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }

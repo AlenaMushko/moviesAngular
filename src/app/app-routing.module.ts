@@ -11,7 +11,8 @@ const routes: Routes = [
             {path:'genre', loadChildren:()=> import('./modules/genres/genres.module').then(m=>m.GenresModule)},
             {path:'soon', loadChildren:()=> import('./modules/soon/soon.module').then(m=>m.SoonModule)},
             {path:'register', loadChildren:()=> import('./modules/register/register.module').then(m=>m.RegisterModule)},
-            {path:'login', loadChildren:()=>import('./modules/login/login.module').then(m=>m.LoginModule)}
+            {path:'login', loadChildren:()=>import('./modules/login/login.module').then(m=>m.LoginModule)},
+            { path: '**', redirectTo: 'movie' }
         ]
     }
 ]
