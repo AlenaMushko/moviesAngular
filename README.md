@@ -1,27 +1,26 @@
-# Movies
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+# Movies App 🎬
+### This application is crafted for movie enthusiasts who are looking for films to watch. Dive into detailed information about each movie, catch a glimpse of its trailer, and decide what to indulge in for the evening.
 
-## Development server
+### Main Features:
+###### Discover Movies: Browse a vast collection of movies to find the next movie to tick off your list.
+###### Detailed Information: Learn about the cast, director, storyline, and more.
+###### Watch Trailers: No need to hop to another platform, watch trailers directly within the app.
+###### Search Functionality: Find films by title or genre, making your choice easier and faster.
+###### User Friendly: A sleek, intuitive interface ensures a pleasant browsing experience.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### etup & Installation:
+###### Clone the repository: git clone [https://github.com/AlenaMushko/moviesAngular]
+###### Navigate to the directory: cd movies
+###### Install the dependencies: npm install
+###### Run the app locally: ng serve
 
-## Code scaffolding
+### Technologies Used:
+###### Angular (v16.2.0)
+###### TypeScript (v5.1.3)
+###### @supabase/supabase-js (v2.33.2)
+###### @angular/material (v16.2.4)
+###### RxJS (v7.8.0)
+###### Bootstrap Icons (v1.11.0)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Enjoy your movie time with the Movies App! 🍿📽️
