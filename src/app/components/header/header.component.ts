@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef, OnInit } from '@angular/core';
+import {Component, ChangeDetectorRef, OnInit} from '@angular/core';
 import {UserService} from "../../services/user.service";
 
 @Component({
@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
     isDarkTheme = true;
     userName: string | null = null;
 
-    constructor(private changeDetector: ChangeDetectorRef, private userService:UserService) {
+    constructor(private changeDetector: ChangeDetectorRef, private userService: UserService) {
         const savedTheme = localStorage.getItem('isDarkTheme');
         if (savedTheme !== null) {
             this.isDarkTheme = savedTheme === 'true';
@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
 
     ngOnInit() {
         this.userService.user$.subscribe(value => {
-            this.userName = value ? value.slice(0,1) : null;
+            this.userName = value ? value.slice(0, 1) : null;
             this.changeDetector.markForCheck();
         })
     }
