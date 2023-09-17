@@ -7,8 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   isDarkTheme = true;
+  user:string;
 
   constructor() {
+    this.user = sessionStorage.getItem('userName') as string;
+
+    console.log(this.user)
     const savedTheme = localStorage.getItem('isDarkTheme');
     if (savedTheme !== null) {
       this.isDarkTheme = savedTheme === 'true';

@@ -9,6 +9,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -16,14 +17,15 @@ import {MatInputModule} from "@angular/material/input";
       RegisterPageComponent,
       RegisterFormComponent,
   ],
-  imports: [
-    CommonModule,
-    RegisterRoutingModule,
-    MatButtonModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatInputModule,
-  ]
+    imports: [
+        CommonModule,
+        RegisterRoutingModule,
+        MatButtonModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatIconModule,
+        MatInputModule,
+        ReactiveFormsModule,
+    ]
 })
 export class RegisterModule { }

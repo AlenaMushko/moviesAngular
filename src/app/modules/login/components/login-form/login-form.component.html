@@ -1,25 +1,23 @@
-<form>
+<form [formGroup]="loginForm" (ngSubmit)="handleLogin()">
     <mat-card class="form-card" style="background-color: var(--background-secondary-color)">
         <mat-card-header class="form-title">
-            <mat-card-title>LOGIN</mat-card-title>
+            <mat-card-title>{{alertMessage}}</mat-card-title>
         </mat-card-header>
         <mat-card-content>
 
-            <mat-form-field class="form-label" appearance="outline">
-                <mat-label >Name</mat-label>
-                <input matInput required class=" bigger-label">
-                <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-            </mat-form-field>
-
+            <i style="color: tomato" *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty
+                || loginForm.controls['email'].touched)"> Email is required and must be valid</i>
             <mat-form-field class="form-label" appearance="outline">
                 <mat-label >Email</mat-label>
-                <input matInput required class=" bigger-label">
+                <input matInput required class=" bigger-label" formControlName="email">
                 <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
             </mat-form-field>
 
+            <i style="color: tomato" *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty
+                || loginForm.controls['password'].touched)"> Password is required and must contain from 8 to 20 symbols</i>
             <mat-form-field class="form-label" appearance="outline">
                 <mat-label >Password</mat-label>
-                <input matInput [type]="hide ? 'password' : 'text'">
+                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" class=" bigger-label">
                 <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                         [attr.aria-pressed]="hide">
                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -27,7 +25,7 @@
             </mat-form-field>
 
             <mat-card-actions>
-                <button mat-raised-button class="btn form-btn" style="background: var(--login-btn)">Login</button>
+                <button mat-raised-button class="btn form-btn" style="background: var(--login-btn)" [disabled]="loginForm.invalid">Login</button>
             </mat-card-actions>
         </mat-card-content>
     </mat-card>
