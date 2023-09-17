@@ -12,8 +12,8 @@ export class MoviesService {
     constructor(private httpClient: HttpClient) {
     }
 
-    getAll(page: number): Observable<IPagination<IFilm>> {
-        return this.httpClient.get<IPagination<IFilm>>(urls.movies.base + api_key + `&page=${page}`)
+    getAll(page=1): Observable<IPagination<IFilm>> {
+        return this.httpClient.get<IPagination<IFilm>>(urls.movies.base + api_key + `&page=${page}`, {params:{page}})
     }
 
     getById(id: number): Observable<IMovieById> {

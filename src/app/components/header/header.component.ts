@@ -1,35 +1,49 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
-  isDarkTheme = true;
-  user:string;
+export class HeaderComponent implements OnInit {
+    isDarkTheme = true;
+    user: string;
+    userName: string;
 
-  constructor() {
-    this.user = sessionStorage.getItem('userName') as string;
+    constructor(private changeDetector: ChangeDetectorRef) {
+        this.refreshUser(false);  // false indicates that we don't want to run change detection here
 
-    console.log(this.user)
-    const savedTheme = localStorage.getItem('isDarkTheme');
-    if (savedTheme !== null) {
-      this.isDarkTheme = savedTheme === 'true';
-    } else {
-      this.isDarkTheme = true;
+        const savedTheme = localStorage.getItem('isDarkTheme');
+        if (savedTheme !== null) {
+            this.isDarkTheme = savedTheme === 'true';
+        } else {
+            this.isDarkTheme = true;
+        }
+        document.body.classList.toggle('dark-theme', this.isDarkTheme);
     }
-    document.body.classList.toggle('dark-theme', this.isDarkTheme);
-  }
 
+    ngOnInit() {
+        this.refreshUser(true);
+    }
 
-  toggleTheme() {
-    this.isDarkTheme = !this.isDarkTheme;
-    document.body.classList.toggle('dark-theme', this.isDarkTheme);
-    localStorage.setItem('isDarkTheme', this.isDarkTheme.toString());
-  }
+    refreshUser(runChangeDetection: boolean) {
+        this.user = sessionStorage.getItem('userName') as string;
+        if (this.user) {
+            this.userName = this.user.slice(0, 1);
+        }
+        if (runChangeDetection) {
+            this.changeDetector.detectChanges();
+        }
+    }
 
-  logOut(){
+    toggleTheme() {
+        this.isDarkTheme = !this.isDarkTheme;
+        document.body.classList.toggle('dark-theme', this.isDarkTheme);
+        localStorage.setItem('isDarkTheme', this.isDarkTheme.toString());
+    }
 
-  }
+    logOut() {
+        sessionStorage.removeItem('userName');
+        this.refreshUser(true);
+    }
 }

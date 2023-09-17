@@ -14,6 +14,7 @@ import {
 import {MatListModule} from "@angular/material/list";
 import {ProductionImgComponent} from './components/production-img/production-img.component';
 import {YouTubePlayerModule} from "@angular/youtube-player";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
     declarations: [
@@ -37,6 +38,7 @@ import {YouTubePlayerModule} from "@angular/youtube-player";
         MatCardModule,
         MatListModule,
         YouTubePlayerModule,
+        MatPaginatorModule,
     ]
 })
 export class MoviesModule {
