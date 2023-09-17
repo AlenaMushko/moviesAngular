@@ -1,5 +1,5 @@
-.header{
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(38,29,74,0.7203475140056023) 100%);
+.header {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(38, 29, 74, 0.7203475140056023) 100%);
     padding: 16px;
     display: flex;
     justify-content: space-around;
@@ -10,14 +10,14 @@
     }
 }
 
-.header-wrapper{
+.header-wrapper {
     display: flex;
     justify-content: space-around;
     gap: 3vw;
-
+    align-items: center;
 }
 
-.header a{
+.header a {
     padding: 8px;
     text-decoration: none;
     color: #03071f;
@@ -26,10 +26,24 @@
     transition: boxShadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header a[class=active]{
-background: linear-gradient(90deg, rgba(135,206,250,1) 10%, rgba(119,95,216,0.759563200280112) 100%);
+.header a[class=active] {
+    background: linear-gradient(90deg, rgba(135, 206, 250, 1) 10%, rgba(119, 95, 216, 0.759563200280112) 100%);
 }
 
-.header a:hover{
+.header a:hover {
     box-shadow: 0 8px 43px #775fd8;
+}
+
+.header-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    font-size: 30px;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 50%;
+    background-color: var(--border-color);
 }
