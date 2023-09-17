@@ -1,4 +1,5 @@
 import { Component, ChangeDetectorRef, OnInit } from '@angular/core';
+import {UserService} from "../../services/user.service";
 
 @Component({
     selector: 'app-header',
@@ -7,12 +8,9 @@ import { Component, ChangeDetectorRef, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
     isDarkTheme = true;
-    user: string;
-    userName: string;
+    userName: string | null = null;
 
-    constructor(private changeDetector: ChangeDetectorRef) {
-        this.refreshUser(false);  // false indicates that we don't want to run change detection here
-
+    constructor(private changeDetector: ChangeDetectorRef, private userService:UserService) {
         const savedTheme = localStorage.getItem('isDarkTheme');
         if (savedTheme !== null) {
             this.isDarkTheme = savedTheme === 'true';
@@ -23,17 +21,10 @@ export class HeaderComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.refreshUser(true);
-    }
-
-    refreshUser(runChangeDetection: boolean) {
-        this.user = sessionStorage.getItem('userName') as string;
-        if (this.user) {
-            this.userName = this.user.slice(0, 1);
-        }
-        if (runChangeDetection) {
-            this.changeDetector.detectChanges();
-        }
+        this.userService.user$.subscribe(value => {
+            this.userName = value ? value.slice(0,1) : null;
+            this.changeDetector.markForCheck();
+        })
     }
 
     toggleTheme() {
@@ -43,7 +34,6 @@ export class HeaderComponent implements OnInit {
     }
 
     logOut() {
-        sessionStorage.removeItem('userName');
-        this.refreshUser(true);
+        this.userService.removeUser();
     }
 }

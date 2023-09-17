@@ -1,17 +1,17 @@
 <div class="header">
-    <div class="header-wrapper">
+    <div class="header-wrapper" *ngIf="userName">
         <a routerLink="movie" routerLinkActive="active">Movies</a>
         <a routerLink="genre" routerLinkActive="active">Genres</a>
         <a routerLink="soon" routerLinkActive="active">Soon</a>
     </div>
 
     <div class="header-wrapper">
-        <div *ngIf="!user">
+        <div *ngIf="!userName">
             <a routerLink="login" routerLinkActive="active">Login</a>
             <a routerLink="register" routerLinkActive="active">Register</a>
         </div>
 
-        <div *ngIf="user" class="header-user">
+        <div *ngIf="userName" class="header-user">
             <button mat-raised-button class="btn" (click)="logOut()">Log Out</button>
             <p class="avatar">{{userName}}</p>
         </div>

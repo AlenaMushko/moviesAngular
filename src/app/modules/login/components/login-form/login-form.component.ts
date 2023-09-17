@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {SupabaseService} from "../../../../services";
 import {Router} from "@angular/router";
+import {UserService} from "../../../../services/user.service";
 
 @Component({
   selector: 'app-login-form',
@@ -14,7 +15,9 @@ export class LoginFormComponent implements OnInit {
   loginForm: FormGroup;
   alertMessage = 'LOGIN';
 
-  constructor(private formBuilder: FormBuilder, private supabaseService:SupabaseService, private router:Router) {
+  constructor(private formBuilder: FormBuilder, private supabaseService:SupabaseService,
+              private router:Router, private userService:UserService
+  ) {
     this.loginForm = this.formBuilder.group({
       email: formBuilder.control('', [
         Validators.email,
@@ -37,9 +40,9 @@ export class LoginFormComponent implements OnInit {
       const data = await this.supabaseService.login(this.loginForm.value.email, this.loginForm.value.password);
 
       if (data) {
-       sessionStorage.setItem('userName', data.name);
+        this.userService.setUser(data.name)
         setTimeout(() => {
-          sessionStorage.removeItem('userName');
+          this.userService.removeUser()
         }, 60 * 60 * 1000);
 
         this.alertMessage = 'LOGIN';
